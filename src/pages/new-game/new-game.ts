@@ -7,7 +7,7 @@ import { CurrentGamePage } from '../current-game/current-game';
 @Component({
   selector: 'new-game',
   templateUrl: 'new-game.html',
-  styleUrls: ['/src/pages/new-game/new-game.scss']
+  styleUrls: ['/src/pages/new-game/new-game.css']
 })
 export class NewGamePage {
   public player1Name: string;

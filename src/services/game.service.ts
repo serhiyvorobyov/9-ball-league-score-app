@@ -1,10 +1,16 @@
 import { Injectable } from "@angular/core";
 import { Game } from "../models/game.model";
 import { Storage } from '@ionic/storage';
+import { Subject } from "rxjs/Subject";
 
 @Injectable()
 export class GameService {
+  private _games: Subject<Array<Game>>;
   constructor(private storage: Storage) { }
+
+  get $games() {
+    return this._games;
+  }
 
   public async getGameHistory(): Promise<Array<Game>> {
     const gamesString:string = await this.storage.get('games');
