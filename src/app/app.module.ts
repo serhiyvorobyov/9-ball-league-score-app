@@ -1,4 +1,5 @@
 import {IonicStorageModule} from '@ionic/storage';
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -26,7 +27,8 @@ import { GameResultComponent } from '../components/game-result/game-result';
     GameResultComponent
   ],
   imports: [
-  BrowserModule,
+    BrowserModule,
+    CommonModule,
     IonicModule.forRoot(MyApp),
     IonicStorageModule.forRoot()
   ],
