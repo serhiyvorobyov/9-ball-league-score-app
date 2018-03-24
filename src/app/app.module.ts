@@ -1,3 +1,4 @@
+import {IonicStorageModule} from '@ionic/storage';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -6,24 +7,30 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HistoryPage } from '../pages/history/history';
+import { NewGamePage } from '../pages/new-game/new-game';
+import { GameService } from '../services/game.service';
 
 @NgModule({
   declarations: [
     MyApp,
-    HistoryPage
+    HistoryPage,
+    NewGamePage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    IonicStorageModule.forRoot()
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HistoryPage
+    HistoryPage,
+    NewGamePage
   ],
   providers: [
     StatusBar,
     SplashScreen,
+    GameService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
