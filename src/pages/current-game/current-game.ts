@@ -8,7 +8,6 @@ import * as moment from 'moment';
   selector: 'page-current-game',
   templateUrl: 'current-game.html',
   styleUrls: ['/src/pages/current-game/current-game.css'],
-  providers: [GameService]
 })
 export class CurrentGamePage {
   public game: Game;
