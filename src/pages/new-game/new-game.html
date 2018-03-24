@@ -11,15 +11,15 @@
 
     <ion-item>
       <ion-label floating>Player 1</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-input [(ngModel)]="player1Bame" type="text"></ion-input>
     </ion-item>
   
     <ion-item>
-      <ion-label floating>Player 1</ion-label>
-      <ion-input type="text"></ion-input>
+      <ion-label floating>Player 2</ion-label>
+      <ion-input [(ngModel)]="player2Name" type="text"></ion-input>
     </ion-item>
     
-    <button ion-button full>START</button>
+    <button ion-button full (click)="startGame()">START</button>
 
   </ion-list>
 </ion-content>

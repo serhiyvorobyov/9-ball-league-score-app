@@ -9,12 +9,14 @@ import { MyApp } from './app.component';
 import { HistoryPage } from '../pages/history/history';
 import { NewGamePage } from '../pages/new-game/new-game';
 import { GameService } from '../services/game.service';
+import { CurrentGamePage } from '../pages/current-game/current-game';
 
 @NgModule({
   declarations: [
     MyApp,
     HistoryPage,
-    NewGamePage
+    NewGamePage,
+    CurrentGamePage
   ],
   imports: [
     BrowserModule,
@@ -25,7 +27,8 @@ import { GameService } from '../services/game.service';
   entryComponents: [
     MyApp,
     HistoryPage,
-    NewGamePage
+    NewGamePage,
+    CurrentGamePage
   ],
   providers: [
     StatusBar,

@@ -5,7 +5,7 @@ import { NavController } from 'ionic-angular';
   selector: 'page-current-game',
   templateUrl: 'current-game.html'
 })
-export class HomePage {
+export class CurrentGamePage {
 
   constructor(public navCtrl: NavController) {
 
