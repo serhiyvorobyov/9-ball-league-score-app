@@ -8,6 +8,9 @@
 
 <ion-content padding>
   <ion-list no-line>
-    <button ion-button full (click)="newGame()">NEW GAME</button>
+    <app-game-result *ngFor="let game of games" [game]="game"></app-game-result>
   </ion-list>
+  <ion-fab right bottom>
+    <button ion-fab color="primary" (click)="toCreateGameView()"><ion-icon name="add-circle"></ion-icon></button>
+  </ion-fab>
 </ion-content>

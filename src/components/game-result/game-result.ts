@@ -2,7 +2,7 @@ import { Component, Input } from '@angular/core';
 import { Game } from '../../models/game.model';
 
 @Component({
-  selector: 'game-result',
+  selector: 'app-game-result',
   templateUrl: 'game-result.html',
   styleUrls: ['/src/components/game-result/game-result.scss']
 })
